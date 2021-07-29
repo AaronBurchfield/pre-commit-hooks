@@ -1,0 +1,11 @@
+require 'English'
+status = 0
+ARGV.each do |file|
+  output = `rufo "#{file}" 2>&1`
+  next if $CHILD_STATUS.exitstatus == 0
+  puts "Fixing #{file}"
+  puts output
+  status = 1
+end
+
+exit status

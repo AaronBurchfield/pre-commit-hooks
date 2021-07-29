@@ -1,0 +1,6 @@
+- id: rufo-fix
+  additional_dependencies: ['rufo']
+  entry: rufo-fix
+  language: ruby
+  files: \.rb$
+  name: apply rufo fixes
